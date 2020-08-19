@@ -98,6 +98,7 @@ h1 {
 
 nav {
   display: flex;
+
   padding: 1%;
 }
 
@@ -130,7 +131,8 @@ a:link {
 .intro {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   /* padding: %; */
 }
 
@@ -142,20 +144,60 @@ h2 {
   padding: 1.5%;
 }
 
-@media only screen and (max-width: 1070px) {
+.introtext {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column wrap;
+}
+
+.intro img {
+  width: 29%;
+  padding: 1%;
+  height: auto;
+}
+
+/* 555px is the smallest I can make my browser*/
+@media screen and (max-width: 555px) {
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav {
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 13rem;
+    margin: auto;
+  }
+
+  nav a {
+    display: flex;
+    justify-content: center;
+    border: solid 0.1rem black;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .intro {
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+
   .introtext {
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+  }
+
+  .introtext p {
     text-align: center;
   }
 }
 
-.intro img {
-  width: 10rem;
-  height: auto;
-}
-
 .gallery {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 div.photos {
@@ -163,6 +205,7 @@ div.photos {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  padding: 0.9rem;
 }
 
 .photos img {
@@ -172,7 +215,9 @@ div.photos {
 .photos div p {
   display: flex;
   justify-content: center;
-  padding: 0.2rem;
+  background-color: crimson;
+  padding: 0.1rem;
+  margin: 0.1rem;
 }
 
 footer {
@@ -184,9 +229,9 @@ footer {
 }
 
 footer div a {
-  padding: 0.2rem;
+  padding: 0.5rem;
   border-style: solid;
-  border: 2rem black;
+  border: solid 0.1rem black;
 }
 
 footer div p {
