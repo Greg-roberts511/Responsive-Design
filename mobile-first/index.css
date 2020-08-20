@@ -87,88 +87,25 @@ video {
   vertical-align: baseline;
 }
 
-header {
-  background-color: grey;
-}
+@media screen and (min-width: 0px) {
+  header {
+    background-color: grey;
+  }
 
-h1 {
-  font-size: 3rem;
-  padding: 1%;
-}
-
-nav {
-  display: flex;
-
-  padding: 1%;
-}
-
-a:hover {
-  color: blue;
-  background-color: black;
-}
-
-#home {
-  background-color: black;
-  color: white;
-}
-
-#home:hover {
-  background-color: honeydew;
-  color: grey;
-}
-
-a {
-  background-color: honeydew;
-  padding: 1%;
-  color: black;
-}
-
-a:link {
-  text-decoration: none;
-  /* color: black; */
-}
-
-.intro {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  /* padding: %; */
-}
-
-h2 {
-  padding: 1.2%;
-}
-
-.introtext p {
-  padding: 1.5%;
-}
-
-.introtext {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-flow: column wrap;
-}
-
-.intro img {
-  width: 29%;
-  padding: 1%;
-  height: auto;
-}
-
-/* 555px is the smallest I can make my browser*/
-@media screen and (max-width: 555px) {
   h1 {
+    font-size: 3rem;
     display: flex;
     justify-content: center;
+    padding: 1%;
   }
 
   nav {
+    display: flex;
     flex-flow: column wrap;
     justify-content: center;
     width: 13rem;
     margin: auto;
+    padding: 1%;
   }
 
   nav a {
@@ -176,69 +113,144 @@ h2 {
     justify-content: center;
     border: solid 0.1rem black;
   }
-}
 
-@media screen and (max-width: 800px) {
+  a:hover {
+    color: blue;
+    background-color: black;
+  }
+
+  #home {
+    background-color: black;
+    color: white;
+  }
+
+  #home:hover {
+    background-color: honeydew;
+    color: grey;
+  }
+
+  a {
+    background-color: honeydew;
+    padding: 1%;
+    color: black;
+  }
+
+  a:link {
+    text-decoration: none;
+    /* color: black; */
+  }
+
   .intro {
+    display: flex;
+    align-items: center;
     flex-flow: column wrap;
     justify-content: center;
+    /* padding: %; */
+  }
+
+  h2 {
+    padding: 1.2%;
+  }
+
+  .introtext p {
+    text-align: center;
+    padding: 1.5%;
   }
 
   .introtext {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
   }
 
-  .introtext p {
+  .intro img {
+    width: 29%;
+    padding: 1%;
+    height: auto;
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: center;
+  }
+
+  div.photos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.9rem;
+  }
+
+  .photos img {
+    padding: 1rem;
+  }
+
+  .photos div p {
+    display: flex;
+    justify-content: center;
+    background-color: crimson;
+    padding: 0.1rem;
+    margin: 0.1rem;
+  }
+
+  footer {
+    display: flex;
+    background-color: burlywood;
+    justify-content: center;
     text-align: center;
+    padding: 1rem;
+  }
+
+  footer div a {
+    padding: 0.5rem;
+    border-style: solid;
+    border: solid 0.1rem black;
+  }
+
+  footer div p {
+    padding: 1rem;
+  }
+
+  footer div a:hover {
+    background-color: black;
+    color: grey;
   }
 }
 
-.gallery {
-  display: flex;
-  justify-content: center;
+@media screen and (min-width: 558px) {
+  h1 {
+    justify-content: flex-start;
+  }
+
+  nav {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 13rem;
+    margin: 0;
+    padding: 1%;
+  }
+
+  nav a {
+    padding: 3%;
+    border: none;
+  }
 }
 
-div.photos {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0.9rem;
-}
+@media screen and (min-width: 800px) {
+  .intro {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 
-.photos img {
-  padding: 1rem;
-}
+  .introtext {
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column wrap;
+  }
 
-.photos div p {
-  display: flex;
-  justify-content: center;
-  background-color: crimson;
-  padding: 0.1rem;
-  margin: 0.1rem;
-}
-
-footer {
-  display: flex;
-  background-color: burlywood;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-}
-
-footer div a {
-  padding: 0.5rem;
-  border-style: solid;
-  border: solid 0.1rem black;
-}
-
-footer div p {
-  padding: 1rem;
-}
-
-footer div a:hover {
-  background-color: black;
-  color: grey;
+  .introtext p {
+    text-align: start;
+  }
 }
